@@ -1,0 +1,2 @@
+[![.github/workflows/build.yml](https://github.com/michael-codecov/example-python-prod-build/actions/workflows/build.yml/badge.svg)](https://github.com/michael-codecov/example-python-prod-build/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/michael-codecov/example-python-prod-build/branch/master/graph/badge.svg?token=0zhy2YnGen)](https://codecov.io/gh/michael-codecov/example-python-prod-build)
