@@ -33,3 +33,8 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
         verbose: true
+    - name: Set codecov base commit sha
+      run: |
+        curl -X PUT 'https://api.codecov.io/api/github/michael-codecov/example-python-prod-build/pulls/2?user_provided_base_sha=test1' --header 'Authorization: Token '"$UPLOAD_TOKEN"''
+      env:
+        UPLOAD_TOKEN: ${{ secrets.CODECOV_TOKEN }}
