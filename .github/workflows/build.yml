@@ -35,7 +35,7 @@ jobs:
         verbose: true
     - name: Set codecov base commit sha
       run: |
-        curl -X PUT 'https://api.codecov.io/api/github/michael-codecov/example-python-prod-build/pulls/'"$PR_NUMBER"'?user_provided_base_sha=test1' --header 'Authorization: Token '"$UPLOAD_TOKEN"''
+        curl -X PUT -d 'user_provided_base_sha=sha-goes-here' 'https://api.codecov.io/api/github/michael-codecov/example-python-prod-build/pulls/'"$PR_NUMBER"'' --header 'Authorization: Token '"$UPLOAD_TOKEN"''
       env:
         UPLOAD_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
